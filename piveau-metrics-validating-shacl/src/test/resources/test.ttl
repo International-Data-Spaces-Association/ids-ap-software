@@ -1,0 +1,43 @@
+{
+  "@context" : {
+    "ids" : "https://w3id.org/idsa/core/",
+    "idsc" : "https://w3id.org/idsa/code/"
+  },
+  "@type" : "ids:BaseConnector",
+  "@id" : "https://w3id.org/idsa/autogen/baseConnector/7b934432-a85e-41c5-9f65-669219dde4ea",
+  "ids:publicKey" : {
+    "@type" : "ids:PublicKey",
+    "@id" : "https://w3id.org/idsa/autogen/publicKey/78eb73a3-3a2a-4626-a0ff-631ab50a00f9",
+    "ids:keyType" : {
+      "@id" : "https://w3id.org/idsa/code/RSA"
+    },
+    "ids:keyValue" : "TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF1dzZtRnJkZmxYWlRKZ0ZPQTVzbURYQzA5U21wSldvR3B5RVJaTkV5MzFwS2RzUkdoVGlwUjI3ajlpcm1tcWlodjdnSWd6Q254NmtJUk5HSTJ1MG9GUTVGZ3ZPMXh4Z3pjaWhkcEYwQ2hlT2Y5SU5naXNQa3E1aGo4QWUvRFlYa3ZqaFE2YzZhay9aWWZqME5wcXlFUGNKNU1MUm1ZR2V4TWFNWm1UYnFESnZKbDVKRzMrYkUzWWEyMWhUWllPeGlTaWNwZkZnSjMwa241YVVJQXRkMDVJWnk3ejFzRGlWTHRUWGxMZmUvWlFDNHBuakZ0cyt0YzEyc1g5aWhJbW5Da2QwV3Z6M0NUWm95QlNzYzFUZEJrYjltMEM1dHZnMGZRUDRRZ0YvekgyUW9abm5ySTUydUFaOE1vbVd0WTJsdDNEMGtrcFI2OXBmVkRKN3kzdk4vZXdJREFRQUI="
+  },
+  "ids:version" : "8.0.0",
+  "ids:maintainer" : {
+    "@id" : "https://sovity.de/"
+  },
+  "ids:blupp" : {
+    "@type" : "ids:ConnectorEndpoint",
+    "@id" : "https://w3id.org/idsa/autogen/connectorEndpoint/e5e2ab04-633a-44b9-87d9-a097ae6da3cf",
+    "ids:accessURL" : {
+      "@id" : "https://localhost:8080/api/ids/data"
+    }
+  },
+  "ids:curator" : {
+    "@id" : "https://example.org/"
+  },
+  "ids:inboundModelVersion" : [ "4.2.6", "4.2.7", "4.2.0", "4.2.1", "4.1.2", "4.0.0", "4.1.0", "4.2.4", "4.2.5", "4.2.2", "4.2.3" ],
+  "ids:outboundModelVersion" : "4.2.7",
+  "ids:title" : [ {
+    "@value" : "Dataspace Connector",
+    "@type" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "ids:description" : [ {
+    "@value" : "IDS Connector reference implementation",
+    "@type" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "ids:securityProfile" : {
+    "@id" : "https://w3id.org/idsa/code/BASE_SECURITY_PROFILE"
+  }
+}
