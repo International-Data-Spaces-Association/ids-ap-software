@@ -51,7 +51,7 @@ Needed headers: `Content-Type: application/ld+json`
 The function of interest is `checkRDF(String ap, String rdf)` in file `ids-ap-software/DataspaceConnector/src/main/java/io/dataspaceconnector/controller/CheckRDF.java`
 
 Parameters:
-* ap: Application profile to check. Is supplied as query parameter `shapesModel`, i.e. is the string used in the SHACL lookup in the Validator
-* rdf: String of JSONLD that needs to be checked
+* `ap`: Application profile to check. Is supplied as query parameter `shapesModel`, i.e. is the string used in the SHACL lookup in the Validator
+* `rdf`: String of JSONLD that needs to be checked
 
 Equivalent curl request: ```curl -X POST http://localhost:8080/shacl/validation/report?shapesModel=<ap> -H "Content-Type: application/ld+json" -d <rdf>```
