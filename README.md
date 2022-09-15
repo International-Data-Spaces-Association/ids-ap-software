@@ -55,3 +55,9 @@ Parameters:
 * `rdf`: String of JSONLD that needs to be checked
 
 Equivalent curl request: ```curl -X POST http://localhost:8080/shacl/validation/report?shapesModel=<ap> -H "Content-Type: application/ld+json" -d <rdf>```
+
+## Edit ontology
+
+To validate SHACL, the IDS ontology needs to be loaded as well to make use of inference. For example, information about subclass-relationships is vital to decide wether a mandatory requirement is fulfilled.
+
+The ontology is placed under `ids-ap-software/piveau-metrics-validating-shacl/src/main/resources/rdf/shapes/ids-base/4.1.0/ids-ontology.ttl` as a single file serialization. It is loaded in line `23` in `ids-ap-software/piveau-metrics-validating-shacl/src/main/kotlin/io/piveau/validating/DCATAPShapes.kt
