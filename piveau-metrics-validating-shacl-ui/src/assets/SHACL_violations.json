@@ -1,0 +1,376 @@
+{
+  "@context" : {
+    "description" : "http://purl.org/dc/terms/description",
+    "title" : "http://purl.org/dc/terms/title",
+    "distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#distribution",
+      "@type" : "@id"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "theme" : {
+      "@id" : "http://www.w3.org/ns/dcat#theme",
+      "@type" : "@id"
+    },
+    "accrualPeriodicity" : {
+      "@id" : "http://purl.org/dc/terms/accrualPeriodicity",
+      "@type" : "@id"
+    },
+    "keyword" : "http://www.w3.org/ns/dcat#keyword",
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "contactPoint" : {
+      "@id" : "http://www.w3.org/ns/dcat#contactPoint",
+      "@type" : "@id"
+    },
+    "identifier" : "http://purl.org/dc/terms/identifier",
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "hasEmail" : "http://www.w3.org/2006/vcard/ns#hasEmail",
+    "byteSize" : {
+      "@id" : "http://www.w3.org/ns/dcat#byteSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "mediaType" : "http://www.w3.org/ns/dcat#mediaType",
+    "conformsTo" : {
+      "@id" : "http://purl.org/dc/terms/conformsTo",
+      "@type" : "@id"
+    },
+    "format" : "http://purl.org/dc/terms/format",
+    "accessURL" : {
+      "@id" : "http://www.w3.org/ns/dcat#accessURL",
+      "@type" : "@id"
+    },
+    "name" : "http://xmlns.com/foaf/0.1/name",
+    "checksumValue" : "checksum:Value",
+    "algorithm" : {
+      "@id" : "https://spdx.org/rdf/terms/#algorithm",
+      "@type" : "@id"
+    },
+    "prefLabel" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "primaryTopic" : {
+      "@id" : "http://xmlns.com/foaf/0.1/primaryTopic",
+      "@type" : "@id"
+    },
+    "transIssued" : {
+      "@id" : "https://europeandataportal.eu/voc#transIssued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "originalLanguage" : {
+      "@id" : "https://europeandataportal.eu/voc#originalLanguage",
+      "@type" : "@id"
+    },
+    "transStatus" : {
+      "@id" : "https://europeandataportal.eu/voc#transStatus",
+      "@type" : "@id"
+    },
+    "checksum" : {
+      "@id" : "https://spdx.org/rdf/terms/#checksum",
+      "@type" : "@id"
+    }
+  },
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://www.w3.org/2006/vcard/ns#Kind",
+    "hasEmail" : "elina.dimina@spkc.gov.lv"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://purl.org/dc/terms/Location",
+    "prefLabel" : "Latvija"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "https://spdx.org/rdf/terms/#Checksum",
+    "algorithm" : "checksum:Algorithm_md5",
+    "checksumValue" : "23c1b1275637f1f7e243fd2adc54680e"
+  }, {
+    "@id" : "https://data.gov.lv/organization/1b260597-6bd6-4489-853b-1da62971c086",
+    "@type" : "http://xmlns.com/foaf/0.1/Agent",
+    "name" : "Slimību profilakses un kontroles centrs"
+  }, {
+    "@id" : "https://europeandataportal.eu/set/data/e150cc9a-27c1-4920-a6c2-d20d10469873",
+    "@type" : "http://www.w3.org/ns/dcat#Dataset",
+    "accrualPeriodicity" : "http://publications.europa.eu/mdr/authority/frequency/DAILY",
+    "description" : [ {
+      "@language" : "da-t-lv-t0-mtec",
+      "@value" : "Operationelle oplysninger om bekræftede tilfælde af CODM-19, der er indsendt til centret for forebyggelse af og kontrol med sygdomme. \nDataene indsamles dagligt fra laboratorier og læger. \n\nTidligere offentliggjorte data, fordelt på administrativt område, kan opdateres i henhold til nærmere angivne oplysninger om personens opholdssted. \nData om antallet af aktive sager foreligger fra 21.05.2020 til 18.10.2020.  \nFra 18.10.2020 offentliggøres data om 14 dages kumulativ sygelighed — antallet af personer med CODM-19-infektion i de seneste 14 dage."
+    }, {
+      "@language" : "ro-t-lv-t0-mtec",
+      "@value" : "Informații operaționale privind cazurile confirmate de COVI-19 transmise Centrului de prevenire și control al bolilor.\n  Datele sunt colectate zilnic de la laboratoare și profesioniști din domeniul medical. \n\n\n\nDatele publicate anterior, defalcate pe zone administrative, pot fi actualizate în conformitate cu informațiile specificate privind locul de reședință al persoanei.\n\n\nDatele privind numărul de cazuri active sunt disponibile în perioada 21.05.2020-18.10.2020.\n\n\nÎncepând cu 18.10.2020, sunt publicate date privind 14 de zile de morbiditate cumulativă — numărul de persoane infectate cu COVI-19 în ultimele 14 de zile — sunt publicate."
+    }, {
+      "@language" : "hr-t-lv-t0-mtec",
+      "@value" : "Operativne informacije o potvrđenim slučajevima covida-19 dostavljene Centru za sprečavanje i kontrolu bolesti.  Podaci se svakodnevno prikupljaju od laboratorija i zdravstvenih djelatnika.\n\n Prethodno objavljeni podaci, raščlanjeni po administrativnom području, mogu se ažurirati u skladu s određenim podacima o mjestu boravišta osobe.\n  Podaci o broju aktivnih predmeta dostupni su od 21.5.2020. do 18.10.2020.\n\n\nOd 18.10.2020. objavljeni su podaci o 14 dana kumulativnog pobolijevanja – broju osoba zaraženih bolešću COVID-19 u posljednjih 14 dana."
+    }, {
+      "@language" : "fi-t-lv-t0-mtec",
+      "@value" : "COVID-19:n vahvistettuja tapauksia koskevat operatiiviset tiedot, jotka on toimitettu tautien ehkäisy- ja valvontakeskukselle.\n  Tietoja kerätään päivittäin laboratorioilta ja lääketieteen ammattilaisilta. \n\n\n\nAiemmin julkaistuja tietoja, jotka on jaoteltu hallintoalueittain, voidaan päivittää henkilön asuinpaikkaa koskevien täsmennettyjen tietojen perusteella.\n\n\nVireillä olevien asioiden määrää koskevat tiedot ovat saatavilla vuosilta 21.05.2020–18.10.2020.\n\n\nVuodesta 18.10.2020 lähtien on julkaistu tiedot kumulatiivisesta sairastuvuudesta 14 päivää – COVID-19-tartunnan saaneiden henkilöiden määrä viimeisten 14 päivän aikana."
+    }, {
+      "@language" : "it-t-lv-t0-mtec",
+      "@value" : "Informazioni operative sui casi confermati di Covid-19 trasmesse al Centro per la prevenzione e il controllo delle malattie.  I dati sono raccolti quotidianamente presso laboratori e professionisti del settore medico.\n\n I dati pubblicati in precedenza, suddivisi per area amministrativa, possono essere aggiornati in base a informazioni specifiche sul luogo di residenza della persona.\n  I dati sul numero di casi attivi sono disponibili dal 21.05.2020 al 18.10.2020.\n\n\nA partire dal 18.10.2020 sono pubblicati i dati relativi a 14 giorni di morbilità cumulativa, ossia il numero di persone affette da Covid-19 negli ultimi 14 giorni."
+    }, {
+      "@language" : "bg-t-lv-t0-mtec",
+      "@value" : "Оперативна информация относно потвърдени случаи на COVID-19, предоставена на Центъра за профилактика и контрол върху заболяванията. \nДанните се събират ежедневно от лаборатории и медицински специалисти. \n\nПубликуваните по-рано данни, разбити по административни области, могат да бъдат актуализирани в съответствие с конкретна информация за мястото на пребиваване на лицето. \nДанни за броя на активните случаи са налични от 21.05.2020 г. до 18.10.2020 г.  \nСчитано от 18.10.2020 г. се публикуват данни за 14 дни кумулативна заболеваемост — броят на лицата, заразени с COVID-19 през последните 14 дни."
+    }, {
+      "@language" : "ga-t-lv-t0-mtec",
+      "@value" : "Faisnéis oibríochtúil maidir le cásanna deimhnithe COVID-19 arna chur faoi bhráid an Lárionaid um Ghalair a Chosc agus a Rialú. \nBailítear sonraí go laethúil ó shaotharlanna agus ó ghairmithe leighis. \n\nSonraí a foilsíodh roimhe sin, agus iad miondealaithe de réir réimse riaracháin, féadfar iad a thabhairt cothrom le dáta de réir faisnéise sonraithe maidir le háit chónaithe an duine. \nTá sonraí maidir leis an líon cásanna gníomhacha ar fáil ó 21.05.2020 go 18.10.2020.  \nÓ 18.10.2020 ar aghaidh, foilsítear sonraí 14 lá galrachta carnach – líon na ndaoine a fuair ionfhabhtú COVID-19 le 14 lá anuas."
+    }, {
+      "@language" : "sl-t-lv-t0-mtec",
+      "@value" : "Operativne informacije o potrjenih primerih COVID-19, predložene centru za preprečevanje in obvladovanje bolezni. \nPodatki se dnevno zbirajo pri laboratorijih in zdravstvenih delavcih. \n\nPredhodno objavljeni podatki, razčlenjeni po upravnih področjih, se lahko posodabljajo v skladu z določenimi informacijami o prebivališču osebe. \nPodatki o številu aktivnih primerov so na voljo od 21. maja 2020 do 18. oktobra 2020.  \nOd 18. oktobra 2020 se objavljajo podatki o 14 dneh kumulativne obolevnosti - število oseb z okužbo s COVID-19 v zadnjih 14 dneh."
+    }, {
+      "@language" : "cs-t-lv-t0-mtec",
+      "@value" : "Operativní informace o potvrzených případech onemocnění COVID-19 předložené Středisku pro prevenci a kontrolu nemocí. \nÚdaje se shromažďují denně od laboratoří a zdravotnických pracovníků. \n\nDříve zveřejněné údaje rozdělené podle správní oblasti mohou být aktualizovány podle konkrétních informací o místě bydliště dané osoby. \nÚdaje o počtu probíhajících případů jsou k dispozici od 21. května 2020 do 18. října 2020.  \nOd 18. října 2020 se zveřejňují údaje o 14 dnech kumulativní nemocnosti - počtu osob s infekcí COVID-19 za posledních 14 dnů."
+    }, {
+      "@language" : "hu-t-lv-t0-mtec",
+      "@value" : "Operatív információk a COVID-19 megerősített eseteiről, amelyeket benyújtottak a Betegségmegelőzési és Járványvédelmi Központnak. \nAz adatokat naponta gyűjtik laboratóriumoktól és egészségügyi szakemberektől. \n\nA korábban közzétett adatok közigazgatási területek szerinti bontásban frissíthetők a személy lakóhelyére vonatkozó meghatározott információk alapján. \nA folyamatban lévő ügyek számára vonatkozó adatok 2020.05.21-től 2020.10.18-ig állnak rendelkezésre.  \n2020.10.18-től az 14 napos kumulatív megbetegedési adatok – az elmúlt 14 napban COVID-19 fertőzésben szenvedő személyek száma – közzétételre kerülnek."
+    }, {
+      "@language" : "no-t-lv-t0-mtec",
+      "@value" : "Driftsmessige opplysninger om bekreftede tilfeller av COVID-19 som er innlevert til Senter for forebygging av og kontroll med sykdommer. \nDataene samles inn daglig fra laboratorier og medisinsk personell. \n\nTidligere offentliggjorte data kan ajourføres i henhold til nærmere angitte opplysninger om personens bosted. \nData om antall aktive tilfeller er tilgjengelige fra 21.05.2020 til 18.10.2020.  \nFra og med 18.10.2020 er det offentliggjort opplysninger om 14 dager med samlet sykelighet — antall personer med COIDID-19-infeksjon de siste 14 dagene — offentliggjøres."
+    }, {
+      "@language" : "lt-t-lv-t0-mtec",
+      "@value" : "Ligų prevencijos ir kontrolės centrui pateikta operatyvinė informacija apie patvirtintus COVID-19 atvejus.  Duomenys kasdien renkami iš laboratorijų ir medicinos specialistų.\n\n Anksčiau paskelbti duomenys, suskirstyti pagal administracines sritis, gali būti atnaujinami atsižvelgiant į konkrečią informaciją apie asmens gyvenamąją vietą.\n  Duomenys apie nagrinėjamų bylų skaičių pateikiami nuo 21.05.2020 iki 18.10.2020.\n\n\nNuo 18.10,2020 m. skelbiami 14 dienų suminio sergamumo duomenys – per pastarąsias 14 dienų COVID-19 infekcija užsikrėtusių asmenų skaičius."
+    }, {
+      "@language" : "de-t-lv-t0-mtec",
+      "@value" : "Dem Zentrum für die Prävention und die Kontrolle von Krankheiten übermittelte operative Informationen über bestätigte COVID-19-Fälle.\n  Die Daten werden täglich von Labors und medizinischen Fachkräften erhoben. \n\n\n\nZuvor veröffentlichte Daten, aufgeschlüsselt nach Verwaltungsbereichen, können anhand bestimmter Angaben zum Wohnort der Person aktualisiert werden.\n\n\nDaten zur Zahl der aktiven Fälle liegen von 21.05.2020 bis 18.10.2020 vor.\n\n\nSeit 18.10.2020 werden Daten zu 14 Tagen kumulativer Morbidität – die Zahl der Personen mit COVID-19-Infektion in den letzten 14 Tagen – veröffentlicht."
+    }, {
+      "@language" : "pl-t-lv-t0-mtec",
+      "@value" : "Informacje operacyjne na temat potwierdzonych przypadków COVID-19 przekazane do Centrum ds. Zapobiegania i Kontroli Chorób.  Codziennie zbierane są dane od laboratoriów i pracowników służby zdrowia.\n\n Wcześniej opublikowane dane, w podziale na obszary administracyjne, mogą być aktualizowane zgodnie z określonymi informacjami dotyczącymi miejsca zamieszkania danej osoby.\n  Dane dotyczące liczby aktywnych spraw są dostępne od 21.05.2020 r. do 18.10.2020 r.\n\n\nNa dzień 18.10.2020 r. publikowane są dane dotyczące 14 dni skumulowanej zachorowalności - liczby osób zakażonych COVID-19 w ciągu ostatnich 14 dni."
+    }, {
+      "@language" : "en-t-lv-t0-mtec",
+      "@value" : "Operational information on confirmed cases of COVID-19 submitted to the Centre for Disease Prevention and Control. \nData are collected daily from laboratories and medical professionals. \n\nPreviously published data, broken down by administrative area, may be updated according to specified information on the person’s place of residence. \nData on the number of active cases are available from 21.05.2020 to 18.10.2020.  \nAs of 18.10.2020, data on 14 days of cumulative morbidity – the number of persons with COVID-19 infection in the last 14 days – are published."
+    }, {
+      "@language" : "el-t-lv-t0-mtec",
+      "@value" : "Επιχειρησιακές πληροφορίες σχετικά με επιβεβαιωμένα κρούσματα COVID-19 που υποβλήθηκαν στο Κέντρο Πρόληψης και Ελέγχου Νόσων.  Τα δεδομένα συλλέγονται καθημερινά από εργαστήρια και επαγγελματίες του τομέα της υγείας.\n\n Τα δεδομένα που έχουν ήδη δημοσιευθεί, κατανεμημένα ανά διοικητική περιοχή, μπορούν να επικαιροποιούνται σύμφωνα με συγκεκριμένες πληροφορίες σχετικά με τον τόπο κατοικίας του προσώπου.\n  Στοιχεία σχετικά με τον αριθμό των ενεργών υποθέσεων είναι διαθέσιμα από το 21.05.2020 έως το 18.10.2020.\n\n\nΑπό το 18.10.2020 δημοσιεύονται στοιχεία για 14 ημέρες σωρευτικής νοσηρότητας — ο αριθμός των ατόμων με λοίμωξη από τη νόσο COVID-19 κατά τις τελευταίες 14 ημέρες."
+    }, {
+      "@language" : "nl-t-lv-t0-mtec",
+      "@value" : "Operationele informatie over bevestigde gevallen van COVID-19 ingediend bij het Centrum voor ziektepreventie en -bestrijding.\n  De gegevens worden dagelijks verzameld bij laboratoria en medisch personeel. \n\n\n\nEerder gepubliceerde gegevens, uitgesplitst naar administratieve zone, kunnen worden bijgewerkt aan de hand van specifieke informatie over de verblijfplaats van de betrokkene.\n\n\nGegevens over het aantal actieve zaken zijn beschikbaar van 21.05.2020 tot 18.10.2020.\n\n\nVanaf 18.10.2020 worden gegevens over 14 dagen cumulatieve morbiditeit — het aantal personen met COVID-19-infectie in de laatste 14 dagen — gepubliceerd."
+    }, {
+      "@language" : "pt-t-lv-t0-mtec",
+      "@value" : "Informações operacionais sobre os casos confirmados pelo COVID-19 apresentado ao Centro de Prevenção e Controlo das Doenças.\n  Os dados são recolhidos diariamente junto de laboratórios e profissionais de saúde. \n\n\n\nOs dados publicados anteriormente, discriminados por domínio administrativo, podem ser atualizados de acordo com informações específicas sobre o local de residência da pessoa.\n\n\nOs dados sobre o número de casos ativos estão disponíveis entre 21.05.2020 e 18.10.2020.\n\n\nA partir de 18.10.2020, são publicados dados relativos a 14 dias de morbilidade cumulativa — são publicados o número de pessoas com infeção pelo COVID-19 nos últimos 14 dias."
+    }, {
+      "@language" : "et-t-lv-t0-mtec",
+      "@value" : "Haiguste Ennetamise ja Tõrje Keskusele esitatud operatiivteave COVID-19 kinnitatud juhtude kohta.\n  Andmeid kogutakse iga päev laboritelt ja meditsiinitöötajatelt. \n\n\n\nVarem avaldatud andmeid, mis on jaotatud haldusvaldkondade kaupa, võib ajakohastada vastavalt konkreetsele teabele isiku elukoha kohta.\n\n\nAndmed pooleliolevate juhtumite arvu kohta on kättesaadavad ajavahemikul 21.05.2020-18.10.2020.\n\n\nAlates 18.10.2020 avaldatakse andmed kumulatiivse haigestumuse 14 päeva kohta – COVID-19 nakkusega inimeste arv viimase 14 päeva jooksul."
+    }, {
+      "@language" : "sv-t-lv-t0-mtec",
+      "@value" : "Operativ information om bekräftade fall av covid-19 som lämnats in till centrumet för förebyggande och kontroll av sjukdomar.  Data samlas in dagligen från laboratorier och sjukvårdspersonal.\n\n Tidigare publicerade uppgifter, uppdelade efter administrativt område, får uppdateras i enlighet med specificerade uppgifter om personens bosättningsort.\n  Uppgifter om antalet pågående ärenden finns tillgängliga mellan 21.05.2020 och 18.10.2020.\n\n\nFrån och med 18.10.2020 offentliggörs uppgifter om 14 dagars kumulativ sjuklighet – antalet personer med covid-19-infektion under de senaste 14 dagarna."
+    }, {
+      "@language" : "fr-t-lv-t0-mtec",
+      "@value" : "Informations opérationnelles sur les cas confirmés de COVID-19 soumis au Centre de prévention et de contrôle des maladies.\n  Les données sont collectées quotidiennement auprès des laboratoires et des professionnels de la médecine. \n\n\n\nLes données publiées précédemment, ventilées par domaine administratif, peuvent être mises à jour en fonction des informations spécifiées sur le lieu de résidence de la personne.\n\n\nDes données sur le nombre de cas en cours sont disponibles de 21.05.2020 à 18.10.2020.\n\n\nÀ partir de 18.10.2020, les données relatives à 14 jours de morbidité cumulée — le nombre de personnes infectées par la COVID-19 au cours des 14 derniers jours — sont publiées."
+    }, {
+      "@language" : "es-t-lv-t0-mtec",
+      "@value" : "Información operativa sobre casos confirmados de COVID-19 presentada al Centro para la Prevención y el Control de las Enfermedades.  Los datos se recogen diariamente de laboratorios y profesionales médicos.\n\n Los datos publicados anteriormente, desglosados por zonas administrativas, podrán actualizarse con arreglo a la información especificada sobre el lugar de residencia de la persona.\n  Se dispone de datos sobre el número de casos activos de 21.05.2020 a 18.10.2020.\n\n\nA partir de 18.10.2020, se publican datos sobre los 14 días de morbilidad acumulada — el número de personas infectadas por COVID-19 en los últimos 14 días —."
+    }, {
+      "@language" : "mt-t-lv-t0-mtec",
+      "@value" : "Informazzjoni operazzjonali dwar każijiet ikkonfermati tal-COVID-19 ippreżentata liċ-Ċentru għall-Prevenzjoni u l-Kontroll tal-Mard. \nId-data tinġabar kuljum mil-laboratorji u l-professjonisti mediċi. \n\nData ppubblikata qabel, imqassma skont il-qasam amministrattiv, tista’ tiġi aġġornata skont informazzjoni speċifikata dwar il-post ta’ residenza tal-persuna. \nId-data dwar l-għadd ta’ każijiet attivi hija disponibbli mill-21.05.2020 sal-18.10.2020.  \nMill-18.10.2020, tiġi ppubblikata data dwar 14 jum ta’ morbidità kumulattiva — l-għadd ta’ persuni b’infezzjoni tal-COVID-19 fl-aħħar 14 jum."
+    }, "Slimību profilakses un kontroles centram iesniegtā operatīvā informācija  par apstiprinātajiem COVID-19 gadījumiem.\r\nDati tiek apkopoti reizi dienā no laboratorijām un ārstniecības personām.\r\n\r\nIepriekš publicētie dati sadalījumā pa administratīvajām teritorijām var tikt aktualizēti atbilstoši precizētai informācijai par personas dzīvesvietu. \r\nNo 21.05.2020. līdz 18.10.2020. ir pieejami dati par aktīvo gadījumu skaitu.\r\nNo 18.10.2020. tiek publicēti dati par 14 dienu kumulatīvo saslimstību - personu skaits, kurām pēdējās 14 dienās konstatēta Covid-19 infekcija. \r\n", {
+      "@language" : "sk-t-lv-t0-mtec",
+      "@value" : "Operačné informácie o potvrdených prípadoch ochorenia COVID-19 predložené centru pre prevenciu a kontrolu chorôb.\n  Údaje sa zbierajú denne od laboratórií a zdravotníckych pracovníkov. \n\n\n\nPredtým uverejnené údaje rozčlenené podľa administratívnej oblasti sa môžu aktualizovať podľa konkrétnych informácií o mieste bydliska osoby.\n\n\nÚdaje o počte aktívnych prípadov sú k dispozícii od 21.5.2020 do 18.10.2020.\n\n\nOd 18. 2020 sa zverejňujú údaje o 14 dňoch kumulatívnej chorobnosti – počte osôb s infekciou COVID-19 za posledných 14 dní."
+    } ],
+    "identifier" : "e150cc9a-27c1-4920-a6c2-d20d10469873",
+    "issued" : "2020-04-08T00:00:00",
+    "language" : "https://data.gov.lv/dati/lv",
+    "modified" : "2021-01-12T16:30:50.621785",
+    "publisher" : "https://data.gov.lv/organization/1b260597-6bd6-4489-853b-1da62971c086",
+    "spatial" : "_:b1",
+    "title" : [ {
+      "@language" : "sk-t-lv-t0-mtec",
+      "@value" : "Počet potvrdených prípadov ochorenia COVID-19 a 14-dňová kumulatívna chorobnosť na administratívnu oblasť\n"
+    }, {
+      "@language" : "de-t-lv-t0-mtec",
+      "@value" : "Zahl der bestätigten COVID-19-Fälle und 14 Tage kumulierter Morbidität je Verwaltungsgebiet\n"
+    }, {
+      "@language" : "el-t-lv-t0-mtec",
+      "@value" : "Αριθμός επιβεβαιωμένων κρουσμάτων COVID-19 και σωρευτική νοσηρότητα 14 ημερών ανά διοικητική περιοχή\n"
+    }, {
+      "@language" : "pt-t-lv-t0-mtec",
+      "@value" : "Número de casos confirmados da morbilidade acumulada COVID-19 e 14 dias por área administrativa\n"
+    }, {
+      "@language" : "et-t-lv-t0-mtec",
+      "@value" : "Kinnitatud COVID-19 juhtumite arv ja kumulatiivne haigestumus 14 päeva halduspiirkonna kohta\n"
+    }, {
+      "@language" : "hr-t-lv-t0-mtec",
+      "@value" : "Broj potvrđenih slučajeva covida-19 i 14 dana kumulativnog pobolijevanja po administrativnom području\n"
+    }, "COVID-19 apstiprināto gadījumu skaits un 14 dienu kumulatīvā saslimstība pa administratīvajām teritorijām", {
+      "@language" : "fr-t-lv-t0-mtec",
+      "@value" : "Nombre de cas confirmés de COVID-19 et 14 jours de morbidité cumulée par zone administrative\n"
+    }, {
+      "@language" : "no-t-lv-t0-mtec",
+      "@value" : "Antall bekreftede tilfeller av COIDID-19 og 14 dager samlet sykelighet per administrativt område\n"
+    }, {
+      "@language" : "mt-t-lv-t0-mtec",
+      "@value" : "Għadd ta’ każijiet ikkonfermati ta’ COVID-19 u 14 jum ta’ morbidità kumulattiva għal kull qasam amministrattiv\n"
+    }, {
+      "@language" : "ro-t-lv-t0-mtec",
+      "@value" : "Numărul de cazuri confirmate de doze de COVI-19 și 14 de zile cumulative pentru fiecare zonă administrativă\n"
+    }, {
+      "@language" : "sv-t-lv-t0-mtec",
+      "@value" : "Antal bekräftade fall av covid-19 och 14 dagars kumulativ sjuklighet per förvaltningsområde\n"
+    }, {
+      "@language" : "sl-t-lv-t0-mtec",
+      "@value" : "Število potrjenih primerov COVID-19 in 14 dni kumulativna obolevnost na upravno območje\n"
+    }, {
+      "@language" : "fi-t-lv-t0-mtec",
+      "@value" : "Vahvistettujen COVID-19-tapausten ja 14 päivän kumulatiivisen sairastuvuuden tapausten lukumäärä hallinnollisella alueella\n"
+    }, {
+      "@language" : "en-t-lv-t0-mtec",
+      "@value" : "Number of confirmed cases of COVID-19 and 14 days cumulative morbidity per administrative area\n"
+    }, {
+      "@language" : "it-t-lv-t0-mtec",
+      "@value" : "Numero di casi confermati di Covid-19 e di morbilità cumulativa di 14 giorni per area amministrativa\n"
+    }, {
+      "@language" : "hu-t-lv-t0-mtec",
+      "@value" : "Megerősített COVID-19 és 14 nap kumulatív megbetegedési esetek száma közigazgatási területenként\n"
+    }, {
+      "@language" : "lt-t-lv-t0-mtec",
+      "@value" : "Patvirtintų COVID-19 ir 14 dienų suminis sergamumas atvejų skaičius pagal administracinį rajoną\n"
+    }, {
+      "@language" : "nl-t-lv-t0-mtec",
+      "@value" : "Aantal bevestigde gevallen van COVID-19 en 14 dagen cumulatieve morbiditeit per administratief gebied\n"
+    }, {
+      "@language" : "da-t-lv-t0-mtec",
+      "@value" : "Antal bekræftede tilfælde af CODM-19-dage og 14 dages kumulativ sygelighed pr. administrativt område\n"
+    }, {
+      "@language" : "pl-t-lv-t0-mtec",
+      "@value" : "Liczba potwierdzonych przypadków COVID-19 i łączna zachorowalność w ciągu 14 dni na obszar administracyjny\n"
+    }, {
+      "@language" : "bg-t-lv-t0-mtec",
+      "@value" : "Брой потвърдени случаи на COVID-19 и 14 дни кумулативна заболеваемост по административна област\n"
+    }, {
+      "@language" : "cs-t-lv-t0-mtec",
+      "@value" : "Počet potvrzených případů onemocnění COVID-19 a 14 dnů kumulativní nemocnosti v jednotlivých správních oblastech\n"
+    }, {
+      "@language" : "ga-t-lv-t0-mtec",
+      "@value" : "Líon na gcásanna a dearbhaíodh maidir le galracht charnach COVID-19 agus 14 lá in aghaidh an limistéir riaracháin\n"
+    }, {
+      "@language" : "es-t-lv-t0-mtec",
+      "@value" : "Número de casos confirmados de COVID-19 y 14 días de morbilidad acumulada por zona administrativa\n"
+    } ],
+    "type" : "https://data.gov.lv/dati/dataset",
+    "contactPoint" : "_:b0",
+    "distribution" : [ "https://europeandataportal.eu/set/distribution/e5ea3e20-a3ce-4553-9d61-d776d90e5f86", "https://europeandataportal.eu/set/distribution/2355cc70-49b1-4df9-aa70-f71ee7a4ac9a" ],
+    "keyword" : [ "covid-19", "republikas pilsēta", "novads", "infekcijas slimība" ],
+    "theme" : "http://publications.europa.eu/resource/authority/data-theme/HEAL"
+  }, {
+    "@id" : "https://europeandataportal.eu/set/distribution/2355cc70-49b1-4df9-aa70-f71ee7a4ac9a",
+    "@type" : "http://www.w3.org/ns/dcat#Distribution",
+    "description" : [ {
+      "@language" : "lt-t-lv-t0-mtec",
+      "@value" : "Data – data, kurią rodoma informacija apie bendrą patvirtintų atvejų skaičių.\n   Pavadinimas (administracinio teritorinio vieneto pavadinimas) – asmens nurodytos gyvenamosios vietos administracinio vieneto pavadinimas pagal 2017 m. kovo 21 d. Ministrų kabineto reglamentą Nr. 152 dėl administracinių teritorijų ir teritorinių vienetų klasifikavimo (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (Administracinio teritorinio vieneto kodas) – asmens nurodytas gyvenamosios vietos kodas pagal 2017 m. kovo 21 d. Ministrų kabineto reglamentą Nr. 152 dėl administracinių teritorijų ir teritorinių vienetų klasifikavimo.\n \n\nPatvirtinta COVID19infekcija (patvirtinta COVID-19 infekcija): bendras gautų pirminių ataskaitų ir (arba) laboratorijos ataskaitų, kuriose nustatyti teigiami faktai, skaičius.\n\n\n\n\n14DayKumulativaSasstib (14 dienų suminis sergamumas) – COVID-19 infekcija užsikrėtusių asmenų skaičius per pastarąsias 14 dienų."
+    }, {
+      "@language" : "nl-t-lv-t0-mtec",
+      "@value" : "Datum (datum) — de datum waarop informatie over het totale aantal bevestigde gevallen wordt weergegeven.\n   Titel (Naam van de administratieve territoriale eenheid) — naam van de administratieve eenheid van de woonplaats die door de betrokkene is opgegeven overeenkomstig kabinetsverordening nr. 152 van 21 maart 2017 betreffende de indeling van administratieve gebieden en territoriale eenheden (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (code administratieve territoriale eenheid) — Verblijfscode aangegeven door een persoon overeenkomstig kabinetsbesluit nr. 152 van 21 maart 2017 betreffende de indeling van bestuurlijke gebieden en territoriale eenheden.\n \n\nBevestigde COVID-19-infectie (bevestigde COVID-19-infectie): het totale aantal primaire meldingen/laboratoriumverslagen met een positief resultaat.\n\n\n\n\n14DayKumulativaSasstib (cumulatieve morbiditeit van 14 dagen) — aantal personen met COVID-19-infectie in de laatste 14 dagen."
+    }, {
+      "@language" : "sv-t-lv-t0-mtec",
+      "@value" : "Datum (datum) – det datum då information om det totala antalet bekräftade fall visas.\n   Titel (Namn på territoriell förvaltningsenhet) – namn på den administrativa enhet på bosättningsorten som personen angett i enlighet med regeringens förordning nr 152 av den 21 mars 2017 om klassificering av administrativa territorier och territoriella enheter (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (kod för administrativ territoriell enhet) – Uppgift om bosättningsort för en person i enlighet med regeringens förordning nr 152 av den 21 mars 2017 om klassificering av administrativa territorier och territoriella enheter.\n \n\nBekräftad covid-19-infektion (bekräftad covid-19-infektion): det totala antalet primära rapporter/laboratorierapporter som mottagits med positivt resultat.\n\n\n\n\n14DayKumulativaSasstib (14 dagars kumulativ sjuklighet) – antal personer med covid-19-infektion under de senaste 14 dagarna."
+    }, {
+      "@language" : "hr-t-lv-t0-mtec",
+      "@value" : "Datum (datum) – datum na koji su prikazane informacije o ukupnom broju potvrđenih slučajeva.\n   Naslov (naziv upravne teritorijalne jedinice) – naziv upravne jedinice mjesta boravišta koju je osoba navela u skladu s Uredbom kabineta br. 152 od 21. ožujka 2017. o klasifikaciji administrativnih područja i teritorijalnih jedinica (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (oznaka upravne jedinice) – Zakonik o boravištu koji je navela osoba u skladu s Uredbom kabineta br. 152 od 21. ožujka 2017. o klasifikaciji upravnih područja i teritorijalnih jedinica.\n \n\nPotvrđena infekcija uzrokovana bolešću COVID-19 (potvrđena infekcija COVID-om 19): ukupan broj zaprimljenih primarnih izvješća/laboratorijskih izvješća s pozitivnim nalazom.\n\n\n\n\n14DayKumulativaSasstib (kumulativno pobolijevanje 14 dana) – broj osoba zaraženih bolešću COVID-19 u posljednjih 14 dana."
+    }, {
+      "@language" : "cs-t-lv-t0-mtec",
+      "@value" : "Datum (datum) - datum zobrazení informací o celkovém počtu potvrzených případů. \n\nTitul (název správní územní jednotky) - název správní jednotky místa bydliště stanovené osobou v souladu s nařízením vlády č. 152 ze dne 21. března 2017 o klasifikaci správních území a územních jednotek (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\nACVK (kód správní jednotky) - kód bydliště určený osobou v souladu s nařízením vlády č. 152 ze dne 21. března 2017 o klasifikaci správních území a územních jednotek. \n\nPotvrzená infekce COVID-19 (potvrzená infekce COVID-19): celkový počet obdržených primárních zpráv/laboratorních zpráv s pozitivním nálezem. \n \n14DayKumulativaSasstib (14 dnů kumulativní nemocnost) - počet osob s infekcí COVID-19 za posledních 14 dnů."
+    }, {
+      "@language" : "pt-t-lv-t0-mtec",
+      "@value" : "Data (data) — data em que são apresentadas informações sobre o número total de casos confirmados.\n   Título (Nome da unidade territorial administrativa) — nome da unidade administrativa do local de residência indicado pela pessoa em conformidade com o Regulamento n.º 152 do Conselho de Ministros, de 21 de março de 2017, relativo à classificação de territórios administrativos e unidades territoriais (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n AVK (Código da unidade territorial administrativa) — Código de residência indicado por uma pessoa em conformidade com o Regulamento n.º 152 do Conselho de Ministros, de 21 de março de 2017, relativo à classificação de territórios administrativos e unidades territoriais.\n \n\nInfeção confirmada COSV19(infeção confirmada pelo COVID-19): número total de relatórios primários/relatórios laboratoriais recebidos com resultados positivos.\n\n\n\n\n14DayKumulativaSasstib (morbilidade acumulada de 14 dias) — número de pessoas com infeção pela COVI-19 nos últimos 14 dias."
+    }, {
+      "@language" : "de-t-lv-t0-mtec",
+      "@value" : "Datum (Datum) – Datum, an dem Informationen über die Gesamtzahl der bestätigten Fälle angezeigt werden.\n   Titel (Name der Verwaltungsgebietseinheit) – Bezeichnung der Verwaltungseinheit des Wohnorts, die von der Person gemäß der Kabinettsverordnung Nr. 152 vom 21. März 2017 über die Klassifikation der Verwaltungsgebiete und Gebietseinheiten festgelegt wurde (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (Code der Verwaltungsgebietseinheit) – von einer Person gemäß der Kabinettsverordnung Nr. 152 vom 21. März 2017 über die Klassifikation der Verwaltungsgebiete und Gebietseinheiten angegebener Wohnsitzcode.\n \n\nBestätigte COVID-19-Infektion (bestätigte COVID-19-Infektion): Gesamtzahl der Primärmeldungen/Laborberichte, die mit positivem Befund eingegangen sind.\n\n\n\n\n14DayKumulativaSasstib (kumulative Morbidität von 14 Tagen) – Zahl der Personen mit COVID-19-Infektion in den letzten 14 Tagen."
+    }, {
+      "@language" : "hu-t-lv-t0-mtec",
+      "@value" : "Dátum (Dátum) – a visszaigazolt ügyek teljes számára vonatkozó információk megjelenítésének dátuma.\n   Cím (A közigazgatási területi egység neve) – a személy által a közigazgatási területek és a területi egységek osztályozásáról szóló, 2017. március 21-i 152. sz. kormányrendelettel összhangban meghatározott lakóhely szerinti közigazgatási egység neve (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (közigazgatási területi egység kódja) – Egy személy által a közigazgatási területek és területi egységek osztályozásáról szóló, 2017. március 21-i 152. sz. kormányrendeletnek megfelelően megadott lakhelykód.\n \n\nMegerősített COVID19 fertőzés (megerősített COVID-19 fertőzés): a pozitív eredménnyel kapott elsődleges jelentések/laboratóriumi jelentések teljes száma.\n\n\n\n\n14DayKumulativaSasstib (14 napos kumulatív megbetegedés) – COVID-19 fertőzésben szenvedő személyek száma az elmúlt 14 napban."
+    }, {
+      "@language" : "el-t-lv-t0-mtec",
+      "@value" : "Ημερομηνία (Ημερομηνία) — η ημερομηνία εμφάνισης των πληροφοριών σχετικά με τον συνολικό αριθμό επιβεβαιωμένων κρουσμάτων.\n   Τίτλος (Ονομασία διοικητικής εδαφικής ενότητας) — ονομασία της διοικητικής ενότητας του τόπου κατοικίας που προσδιορίζεται από το πρόσωπο σύμφωνα με τον κανονισμό αριθ. 152 του Υπουργικού Συμβουλίου, της 21 Μαρτίου 2017, για την ταξινόμηση των διοικητικών εδαφών και εδαφικών μονάδων (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (κωδικός διοικητικής εδαφικής ενότητας) — Κωδικός κατοικίας που υποδεικνύεται από ένα πρόσωπο σύμφωνα με τον κανονισμό αριθ. 152 του Υπουργικού Συμβουλίου, της 21 Μαρτίου 2017, για την ταξινόμηση των διοικητικών εδαφών και εδαφικών ενοτήτων. \n\n\n\nΕπιβεβαιωμένη λοίμωξη COVID-19 (επιβεβαιωμένη λοίμωξη από τη νόσο COVID-19): ο συνολικός αριθμός των πρωτογενών εκθέσεων/εργαστηριακών εκθέσεων που ελήφθησαν με θετικό εύρημα.\n\n\n\n\n14DayKumulativaSasstib (σωρευτική νοσηρότητα 14 ημερών) — αριθμός ατόμων με λοίμωξη από τη νόσο COVID-19 τις τελευταίες 14 ημέρες."
+    }, {
+      "@language" : "et-t-lv-t0-mtec",
+      "@value" : "Kuupäev (kuupäev) – kuupäev, mil kuvatakse teave kinnitatud juhtumite koguarvu kohta.\n   Pealkiri (haldusüksuse nimi) – elukoha haldusüksuse nimi, mille isik on täpsustanud vastavalt 21. märtsi 2017. aasta määrusele nr 152 haldusterritooriumide ja territoriaalüksuste liigituse kohta (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (halduslik territoriaalüksuse kood) – elukohakood, mille isik on märkinud vastavalt 21. märtsi 2017. aasta määrusele nr 152 haldusterritooriumide ja territoriaalüksuste liigituse kohta.\n \n\nKinnitatud COVID19nakkus (kinnitatud COVID-19 nakkus): positiivse leiuga esmaste aruannete/laboratooriumiaruannete koguarv.\n\n\n\n\n14DayKumulativaSasstib (14 päeva kumulatiivset haigestumust) – COVID-19 nakkusega inimeste arv viimase 14 päeva jooksul."
+    }, {
+      "@language" : "no-t-lv-t0-mtec",
+      "@value" : "Dato (dato) — datoen da opplysninger om det samlede antall bekreftede tilfeller vises. \n Tittel (navn på den administrative territoriale enheten) — navnet på den administrative enheten av bosted angitt av personen i samsvar med forordning nr. 152 av 21. mars 2017 om klassifisering av administrative territorier og regionale enheter (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\nACVK (landkode) en persons bosted angitt av en person i samsvar med forordning nr. 152 av 21. mars 2017 om klassifisering av administrative territorier og regionale enheter.\n \n Bekreftet COIDID19infeksjon (bekreftet COVID-19-infeksjon): samlet antall primære rapporter/laboratorierapporter som er mottatt med positivt resultat.\n\n\n\n\n14Dönevnt (14 dager samlet sykelighet) — antall personer med COIDID-19-infeksjon de siste 14 dagene."
+    }, {
+      "@language" : "da-t-lv-t0-mtec",
+      "@value" : "Dato (dato) — den dato, hvor oplysninger om det samlede antal bekræftede tilfælde vises. \n\nTitel (Navn på administrativ enhed) — navnet på den administrative enhed på bopælsstedet, som den pågældende har angivet i henhold til ministeriel bekendtgørelse nr. 152 af 21. marts 2017 om klassificering af administrative områder og territoriale enheder (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\nACVK (administrativ områdekode) — bopælskode angivet af en person i henhold til ministeriel bekendtgørelse nr. 152 af 21. marts 2017 om klassificering af administrative områder og territoriale enheder. \n\nBekræftet COVID19-infektion (bekræftet infektion i CODMI-19): det samlede antal primære rapporter/laboratorierapporter, der er modtaget med et positivt resultat. \n \n14DayKumulativaSasstib (14 dages kumulativ sygelighed) — antal personer med COVID-19-infektion inden for de sidste 14 dage."
+    }, {
+      "@language" : "fi-t-lv-t0-mtec",
+      "@value" : "Päivämäärä (pvm) – päivä, jona esitetään tiedot vahvistettujen tapausten kokonaismäärästä.\n   Nimike (Hallinnollisen alueellisen yksikön nimi) – sen asuinpaikan hallinnollisen yksikön nimi, jonka henkilö on ilmoittanut hallinnollisten alueiden ja alueellisten yksiköiden luokittelusta 21. maaliskuuta 2017 annetun valtioneuvoston asetuksen N:o 152 mukaisesti (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (hallinnollisen alueellisen yksikön koodi) – Hallintoalueiden ja alueellisten yksiköiden luokittelusta 21. maaliskuuta 2017 annetun valtioneuvoston asetuksen N:o 152 mukainen henkilön ilmoittama asuinpaikkakoodi.\n \n\nVahvistettu COVID19-infektio (vahvistettu COVID-19-infektio): niiden primaaristen/laboratorioraporttien kokonaismäärä, joiden löydös on positiivinen.\n\n\n\n\n14DayKumulativaSasstib (14 päivän kumulatiivinen sairastuvuus) – niiden henkilöiden lukumäärä, joilla on COVID-19-infektio viimeisten 14 päivän aikana."
+    }, {
+      "@language" : "ga-t-lv-t0-mtec",
+      "@value" : "Dáta (Dáta) – an dáta a dtaispeántar faisnéis faoi líon iomlán na gcásanna deimhnithe. \n\nTeideal (Ainm an aonaid chríochaigh riaracháin) – ainm aonad riaracháin na háite cónaithe arna sonrú ag an duine i gcomhréir le Rialachán Comh-Aireachta Uimh. 152 an 21 Márta 2017 maidir le haicmiú críoch riaracháin agus aonad críochach (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\nACVK (Cód an aonaid chríochaigh riaracháin) – Cód cónaithe arna chur in iúl ag duine i gcomhréir le Rialachán Comh-Aireachta Uimh. 152 an 21 Márta 2017 maidir le haicmiú críoch riaracháin agus aonad críochach. \n\nCOVID19infection deimhnithe (Aicíd Dhearbhaithe COVID-19): líon iomlán na dtuarascálacha príomhúla/saotharlainne a fuarthas le toradh dearfach. \n \n14DayKumulativaSasstib (14 lá galracht charnach) – líon na ndaoine a bhfuil ionfhabhtú COVID-19 acu le 14 lá anuas."
+    }, {
+      "@language" : "mt-t-lv-t0-mtec",
+      "@value" : "Data (Data) — id-data li fiha tintwera l-informazzjoni dwar l-għadd totali ta’ każijiet ikkonfermati.\n   Titolu (Isem tal-unità territorjali amministrattiva) — isem l-unità amministrattiva tal-post ta’ residenza speċifikat mill-persuna skont ir-Regolament tal-Kabinett Nru 152 tas-21 ta’ Marzu 2017 dwar il-klassifikazzjoni tat-territorji amministrattivi u l-unitajiet territorjali (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (Kodiċi ta’ unità territorjali amministrattiva) — Kodiċi ta’ residenza indikat minn persuna skont ir-Regolament tal-Kabinett Nru 152 tas-21 ta’ Marzu 2017 dwar il-klassifikazzjoni ta’ territorji amministrattivi u unitajiet territorjali.\n \n\nInfezzjoni kkonfermata tal-COVID-19 (infezzjoni kkonfermata tal-COVID-19): l-għadd totali ta’ rapporti primarji/rapporti tal-laboratorju riċevuti b’sejba pożittiva.\n\n\n\n\n14DayKumulativaSasstib (morbidità kumulattiva ta’ 14 jum) — għadd ta’ persuni b’infezzjoni tal-COVID-19 fl-aħħar 14 jum."
+    }, "Datums (Datums) - datums, uz kuru tiek attēlota informācija par kopējo apstiprināto gadījumu skaitu.\r\n\r\nAdministrativiTeritorialasVienibasNosaukums (Administratīvi teritoriālās vienības nosaukums) - personas norādītās dzīvesvietas administratīvi teritoriālās vienības nosaukums atbilstoši Ministru kabineta 2017. gada 21. marta noteikumiem Nr. 152 \"Administratīvo teritoriju un teritoriālo vienību klasifikatora noteikumi\" (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\r\n\r\nATVK (Administratīvi teritoriālās vienības kods) - Personas norādītās dzīvesvietas kods atbilstoši Ministru kabineta 2017. gada 21. marta noteikumiem Nr. 152 \"Administratīvo teritoriju un teritoriālo vienību klasifikatora noteikumi\".\r\n\r\nApstiprinataCOVID19infekcija (Apstiprināta COVID-19 infekcija) - summārais saņemto primāro ziņojumu/laboratorisko pārskatu skaits ar pozitīvu atradni.\r\n\r\n14DienuKumulativaSaslimstiba (14 dienu kumulatīvā saslimstība) - personu skaits, kurām pēdējās 14 dienās konstatēta Covid-19 infekcija.\r\n", {
+      "@language" : "en-t-lv-t0-mtec",
+      "@value" : "Date (Date) – the date on which information on the total number of confirmed cases is displayed. \n\nTitle (Name of administrative territorial unit) – name of the administrative unit of the place of residence specified by the person in accordance with Cabinet Regulation No 152 of 21 March 2017 on the classification of administrative territories and territorial units (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\nACVK (Administrative territorial unit code) – Code of residence indicated by a person in accordance with Cabinet Regulation No 152 of 21 March 2017 on the classification of administrative territories and territorial units. \n\nConfirmed COVID19infection (Confirmed COVID-19 infection): the total number of primary reports/laboratory reports received with a positive finding. \n \n14DayKumulativaSasstib (14 days cumulative morbidity) – number of persons with COVID-19 infection in the last 14 days."
+    }, {
+      "@language" : "pl-t-lv-t0-mtec",
+      "@value" : "Data (data) - data, w której wyświetlane są informacje o całkowitej liczbie potwierdzonych przypadków.\n \n\n\nTytuł (nazwa administracyjnej jednostki terytorialnej) - nazwa jednostki administracyjnej miejsca zamieszkania wskazanej przez osobę zgodnie z rozporządzeniem Rady Ministrów nr 152 z dnia 21 marca 2017 r. w sprawie klasyfikacji terytoriów administracyjnych i jednostek terytorialnych (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n\n\nACVK (kod administracyjny jednostki terytorialnej) - kodeks miejsca zamieszkania wskazany przez osobę zgodnie z rozporządzeniem Rady Ministrów nr 152 z dnia 21 marca 2017 r. w sprawie klasyfikacji terytoriów administracyjnych i jednostek terytorialnych.\n\n\n\n\nPotwierdzone zakażenie COVID-19 (potwierdzone zakażenie COVID-19): łączna liczba otrzymanych wstępnych sprawozdań/sprawozdań laboratoryjnych z wynikiem pozytywnym.\n\n\n\n\n14DayKulativaSasstib (14 dni skumulowana zachorowalność) - liczba osób zakażonych COVID-19 w ciągu ostatnich 14 dni."
+    }, {
+      "@language" : "sk-t-lv-t0-mtec",
+      "@value" : "Dátum (dátum) – dátum zobrazenia informácií o celkovom počte potvrdených prípadov.\n   Titul (názov územného celku) – názov administratívnej jednotky miesta bydliska uvedenej osobou v súlade s nariadením vlády č. 152 z 21. marca 2017 o klasifikácii administratívnych území a územných jednotiek (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (kód správneho územného celku) – Kód bydliska určený osobou v súlade s nariadením vlády č. 152 z 21. marca 2017 o klasifikácii administratívnych území a územných celkov.\n \n\nPotvrdená nákaza COVID19 (potvrdená infekcia COVID-19): celkový počet primárnych správ/laboratórnych správ prijatých s pozitívnym zistením.\n\n\n\n\n14DayKumulativaSasstib (14 dní kumulatívnej chorobnosti) – počet osôb s infekciou COVID-19 za posledných 14 dní."
+    }, {
+      "@language" : "bg-t-lv-t0-mtec",
+      "@value" : "Дата (дата) — датата, на която се показва информация за общия брой потвърдени случаи. \n\nЗвание (наименование на административната териториална единица) — наименование на административната единица по местоживеене, посочена от лицето в съответствие с Наредба № 152 на Министерския съвет от 21 март 2017 г. за класификация на административните територии и териториални единици (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\nACVK (код на административната териториална единица) — Код на пребиваване, посочен от лице в съответствие с Наредба № 152 на Министерския съвет от 21 март 2017 г. за класификация на административните територии и териториалните единици. \n\nПотвърдена инфекция с COVID19(потвърдена инфекция с COVID-19): общият брой на получените първични доклади/лабораторни доклади с положителна констатация. \n \n14DayKumulativaSasstib (14-дневна кумулативна заболеваемост) — брой на лицата, заразени с COVID-19, през последните 14 дни."
+    }, {
+      "@language" : "sl-t-lv-t0-mtec",
+      "@value" : "Datum (datum) - datum, ko so prikazane informacije o skupnem številu potrjenih primerov.\n\n\n\n\nNaziv (ime upravne teritorialne enote) - ime upravne enote prebivališča, ki jo določi oseba v skladu z uredbo kabineta ministrov št. 152 z dne 21. marca 2017 o klasifikaciji upravnih ozemelj in teritorialnih enot (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n\n\nACVK (koda upravne teritorialne enote) - oznaka prebivališča, ki jo navede oseba v skladu z vladno uredbo št. 152 z dne 21. marca 2017 o razvrstitvi upravnih ozemelj in teritorialnih enot.\n\n\n\n\nPotrjena okužba s COVID-19 (potrjena okužba s COVID-19): skupno število prejetih primarnih poročil/laboratorijskih poročil s pozitivno ugotovitvijo.\n\n\n\n\n14DayKumulativaSasstib (14 dni kumulativna obolevnost) - število oseb z okužbo s COVID-19 v zadnjih 14 dneh.\n"
+    }, {
+      "@language" : "es-t-lv-t0-mtec",
+      "@value" : "Fecha (Date) — fecha en la que aparece la información sobre el número total de casos confirmados.\n   Título (Nombre de la unidad territorial administrativa) — nombre de la unidad administrativa del lugar de residencia especificado por la persona de conformidad con el Reglamento n.º 152 del Consejo de Ministros, de 21 de marzo de 2017, relativo a la clasificación de territorios administrativos y unidades territoriales (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (Código de unidad territorial administrativa) — Código de residencia indicado por una persona de conformidad con el Reglamento del Consejo de Ministros n.º 152, de 21 de marzo de 2017, relativo a la clasificación de territorios administrativos y unidades territoriales.\n \n\nInfección confirmada por la COVID-19 (infección confirmada por la COVID-19): número total de informes primarios/informes de laboratorio recibidos con resultado positivo.\n\n\n\n\n14DayKumulativaSasstib (14 días de morbilidad acumulada) — número de personas infectadas por COVID-19 en los últimos 14 días."
+    }, {
+      "@language" : "it-t-lv-t0-mtec",
+      "@value" : "Data (data) — data in cui sono visualizzate le informazioni sul numero totale di casi confermati.\n   Titolo (Nome dell'unità amministrativa territoriale) — nome dell'unità amministrativa del luogo di residenza specificato dalla persona a norma del regolamento del Gabinetto n. 152, del 21 marzo 2017, relativo alla classificazione dei territori amministrativi e delle unità territoriali (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (codice dell'unità territoriale amministrativa) — Codice di residenza indicato da una persona ai sensi del regolamento del Consiglio dei ministri n. 152, del 21 marzo 2017, relativo alla classificazione dei territori amministrativi e delle unità territoriali.\n \n\nInfezione da Covid-19 confermata (infezione da Covid-19 confermata): numero totale di relazioni primarie/relazioni di laboratorio ricevute con un risultato positivo.\n\n\n\n\n14DayKumulativaSasstib (14 giorni di morbilità cumulativa) — numero di persone con infezione da Covid-19 negli ultimi 14 giorni."
+    }, {
+      "@language" : "fr-t-lv-t0-mtec",
+      "@value" : "Date (Date) — date à laquelle les informations sur le nombre total de cas confirmés sont affichées.\n   Titre (Nom de l’unité territoriale administrative) — nom de l’unité administrative du lieu de résidence spécifié par la personne conformément au règlement no 152 du Conseil des ministres du 21 mars 2017 relatif au classement des territoires administratifs et des unités territoriales (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (code d’unité territoriale administrative) — Code de résidence indiqué par une personne conformément au règlement no 152 du Conseil des ministres du 21 mars 2017 relatif au classement des territoires administratifs et des unités territoriales.\n \n\nInfection confirmée par la COVID-19 (infection confirmée par la COVID-19): nombre total de rapports primaires/rapports de laboratoire reçus avec un résultat positif.\n\n\n\n\n14DayKumulativaSasstib (morbidité cumulée de 14 jours) — nombre de personnes infectées par la COVID-19 au cours des 14 derniers jours."
+    }, {
+      "@language" : "ro-t-lv-t0-mtec",
+      "@value" : "Data (data) — data la care sunt afișate informațiile privind numărul total de cazuri confirmate.\n   Titlul (Denumirea unității teritoriale administrative) — numele unității administrative de la locul de reședință specificate de persoană în conformitate cu Regulamentul Cabinetului nr. 152 din 21 martie 2017 privind clasificarea teritoriilor administrative și a unităților teritoriale (https://likumi.lv/ta/id/289582-administrativo-teritoriju-un-teritorialo-vienibu-klasifikatora-noteikumi)\n\n ACVK (Codul unității administrative teritoriale) — Codul de reședință indicat de o persoană în conformitate cu Regulamentul Cabinetului nr. 152 din 21 martie 2017 privind clasificarea teritoriilor administrative și a unităților teritoriale.\n \n\nInfecția cu VID19infecție confirmată (infecția confirmată cu COVI-19): numărul total de rapoarte primare/rapoarte de laborator primite cu o constatare pozitivă.\n\n\n\n\n14DayKumulativovstib (morbiditate cumulativă de 14 de zile) — numărul de persoane infectate cu COVI-19 în ultimele 14 de zile."
+    } ],
+    "format" : "CSV",
+    "identifier" : "https://data.gov.lv/dataset/e150cc9a-27c1-4920-a6c2-d20d10469873/resource/492931dd-0012-46d7-b415-76fe0ec7c216",
+    "title" : "COVID-19 pa administratīvajām teritorijām",
+    "accessURL" : "https://data.gov.lv/dati/dataset/e150cc9a-27c1-4920-a6c2-d20d10469873/resource/492931dd-0012-46d7-b415-76fe0ec7c216/download/covid_19_pa_adm_terit.csv",
+    "byteSize" : "444564",
+    "mediaType" : "text/csv"
+  }, {
+    "@id" : "https://europeandataportal.eu/set/distribution/e5ea3e20-a3ce-4553-9d61-d776d90e5f86",
+    "@type" : "http://www.w3.org/ns/dcat#Distribution",
+    "conformsTo" : "https://data.gov.lv/dati/lv/dataset/e150cc9a-27c1-4920-a6c2-d20d10469873/resource/dd21217a-baa9-4092-a459-fd37e00f80fd/download/covid_19_pa_adm_terit_metadati.json",
+    "format" : "JSON",
+    "identifier" : "https://data.gov.lv/dataset/e150cc9a-27c1-4920-a6c2-d20d10469873/resource/dd21217a-baa9-4092-a459-fd37e00f80fd",
+    "title" : "COVID-19 pa administratīvajām teritorijām metadati",
+    "accessURL" : "https://data.gov.lv/dati/dataset/e150cc9a-27c1-4920-a6c2-d20d10469873/resource/dd21217a-baa9-4092-a459-fd37e00f80fd/download/covid_19_pa_adm_terit_metadata.json",
+    "byteSize" : "3468",
+    "mediaType" : "application/json"
+  }, {
+    "@id" : "https://europeandataportal.eu/set/record/e150cc9a-27c1-4920-a6c2-d20d10469873",
+    "@type" : "http://www.w3.org/ns/dcat#CatalogRecord",
+    "created" : "2020-05-11T14:05:27Z",
+    "identifier" : "e150cc9a-27c1-4920-a6c2-d20d10469873",
+    "modified" : "2021-01-12T16:45:09Z",
+    "primaryTopic" : "https://europeandataportal.eu/set/data/e150cc9a-27c1-4920-a6c2-d20d10469873",
+    "originalLanguage" : "http://publications.europa.eu/resource/authority/language/LAV",
+    "transIssued" : "2021-01-12T16:45:09Z",
+    "transStatus" : "https://europeandataportal.eu/voc#TransInProcess",
+    "checksum" : "_:b2"
+  } ]
+}

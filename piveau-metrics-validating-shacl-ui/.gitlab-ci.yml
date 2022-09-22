@@ -1,0 +1,106 @@
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - register
+  - deploy
+
+# Modify variables according to your application
+variables:
+  APPLICATION_PORT: 8080
+  JS_SINGLE_PAGE_APPLICATION_NAME: piveau-shacl-validator-ui # Not needed in no JS single page applications
+
+
+build-asset:
+  stage: build
+  image: node:14-alpine
+  only:
+    - tags
+    - master
+    - develop
+    - merge_requests
+  script:
+    - npm clean-install
+    - npm run build
+  artifacts:
+    paths:
+      - dist
+
+
+################################################
+# NO MORE MODIFICATIONS BELOW THIS COMMENT !!! #
+################################################
+
+
+register container for openshift:
+  stage: register
+  tags:
+    - dind
+  image: docker:latest
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - docker:dind
+  only:
+    - develop
+  script:
+    - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+    - docker build --pull -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+
+
+
+register master as prerelease:
+  stage: register
+  tags:
+    - dind
+  image: docker:latest
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - docker:dind
+  only:
+    - master
+  script:
+    - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+    - docker build --pull -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+
+
+register tag as release:
+  stage: register
+  tags:
+    - dind
+  image: docker:latest
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - docker:dind
+  only:
+    - tags
+  script:
+    - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+    - docker build --pull -t "$CI_REGISTRY_IMAGE":$CI_COMMIT_TAG .
+    - docker push "$CI_REGISTRY_IMAGE":$CI_COMMIT_TAG
+
+deploy to openshift:
+  stage: deploy
+  image: ebits/openshift-client
+  only:
+    refs:
+      - develop
+    variables:
+      - $OPENSHIFT_SERVER
+      - $OPENSHIFT_TOKEN
+      - $OPENSHIFT_DOMAIN
+  tags:
+    - vst
+  environment:
+    name: Testing
+  script:
+    - oc login "$OPENSHIFT_SERVER" --token="$OPENSHIFT_TOKEN" --insecure-skip-tls-verify
+    - oc import-image $CI_PROJECT_NAME --from=$CI_REGISTRY_IMAGE --confirm
+    - oc get services $CI_PROJECT_NAME 2> /dev/null || oc new-app --name=$CI_PROJECT_NAME --image-stream=$CI_PROJECT_NAME
+    - oc get routes $CI_PROJECT_NAME 2> /dev/null || oc create route edge --service=$CI_PROJECT_NAME --hostname=$CI_PROJECT_NAME-$OPENSHIFT_DOMAIN --insecure-policy=Redirect --port=8080
