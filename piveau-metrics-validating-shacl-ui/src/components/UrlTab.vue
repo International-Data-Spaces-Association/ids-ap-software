@@ -11,7 +11,7 @@
             cols="12"
           >
             <h1 class="text-h5 font-weight-bold mr-5 pb-2">
-              SHACL Validator
+              IDS-AP Validator
             </h1>
             <div class="d-flex">
               <v-btn
@@ -49,14 +49,10 @@
               sm="12"
             >
               <div class="url-validation-text">
-                This is an interactive implementation of SEMIC’s tool to validate DCAT-AP files
-                against their version 2.0.1 specification.
-                SEMIC’s specification and associated validation SHACL shapes are available on
-                <a href="https://github.com/SEMICeu/DCAT-AP/releases/tag/v2.0.1">SEMIC’s GitHub</a>.
                 <br><br>
-                You can either drag and drop your DCAT-AP file on the page in the box below, or
-                select the file with the “Select Document” button, or – if the file is
-                accessible online – paste the URL below. The file must be a valid
+                You can either drag and drop your IDS-AP self-description on the page in the box below, or
+                select the file with the “Select Document” button, or – if the self-description is
+                accessible online – paste the URL below. The self-description must be a valid
                 linked data file (application/ld+json, application/rdf+xml, application/n-triples,
                 application/trig, text/turtle, text/n3 or text/plain).
               </div>

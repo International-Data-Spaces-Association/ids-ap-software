@@ -31,7 +31,7 @@
                 {{ getRequestError }}
               </span>
               <span v-else>
-                Your API definition has no violations
+                Your IDS Self-description has no violations
               </span>
             </v-alert>
           </v-col>

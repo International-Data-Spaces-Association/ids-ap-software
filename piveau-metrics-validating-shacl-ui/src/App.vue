@@ -4,12 +4,7 @@
       id="block-edp3-branding"
       class="edp-header__branding"
     >
-      <cookie-consent
-        variant="medium-blue"
-        :decline-jump-to-href="`${link}/legal-notice`"
-        :piwik-id="piwikId"
-      />
-    <h1>IDS Connector Validator</h1>
+    <h1>IDS Application Profile Validator</h1>
     </div>
     <v-main>
       <Main />
@@ -18,7 +13,6 @@
 </template>
 
 <script>
-import CookieConsent from '@/components/gdpr/CookieConsent.vue';
 import Main from './components/Main.vue';
 
 import { config as CONFIG } from '../config/config';
@@ -27,7 +21,6 @@ export default {
   name: 'App',
   components: {
     Main,
-    CookieConsent,
   },
   data() {
     return {

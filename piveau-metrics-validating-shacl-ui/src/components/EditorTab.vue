@@ -11,7 +11,7 @@
             cols="12"
           >
             <h1 class="text-h5 font-weight-bold mr-5 pb-2">
-              SHACL Validator
+              IDS-AP Validator
             </h1>
             <div class="d-flex">
               <v-btn
@@ -41,7 +41,7 @@
             sm="6"
           >
             <small style="margin: auto 0; margin-right: 10px; white-space: nowrap;">
-              Validating:
+              Format:
             </small>
             <v-select
               v-model="localModel.type"
