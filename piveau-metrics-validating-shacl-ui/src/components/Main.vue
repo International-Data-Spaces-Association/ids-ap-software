@@ -17,6 +17,10 @@
             background-color="transparent"
             grow
           >
+            <v-tab key="url">
+              Data Provision
+            </v-tab>
+
             <v-tab key="editor">
               Editor
             </v-tab>
@@ -40,6 +44,12 @@
               </template>
             </v-snackbar>
             <!-- SUBMISSION URL -->
+            <v-tab-item key="url">
+              <UrlTab
+                  @edit-in-editor="handleEditInEditor"
+                  @validate-in-editor="handleValidateInEditor"
+              />
+            </v-tab-item>
             <!-- SUBMISSION EDITOR -->
             <v-tab-item key="editor">
               <EditorTab
@@ -70,6 +80,7 @@
 
 <script>
 
+import UrlTab from '@/components/UrlTab.vue';
 import EditorTab from '@/components/EditorTab.vue';
 import Violations from '@/components/Violations.vue';
 
@@ -81,6 +92,7 @@ export default {
   name: 'Main',
 
   components: {
+    UrlTab,
     EditorTab,
     Violations,
   },

@@ -19,20 +19,11 @@
                 :disabled="!valid || loadingStates.editor || loadingStates.validate"
                 :loading="loadingStates.editor"
                 class="mr-1"
-                color="primary"
+                color="#008469"
+                dark
                 @click="handleEdit"
               >
-                Edit in Editor
-              </v-btn>
-
-              <v-btn
-                primary
-                :disabled="!valid || loadingStates.editor || loadingStates.validate"
-                :loading="loadingStates.validate"
-                color="primary"
-                @click="handleValidate"
-              >
-                Validate
+                Go to Editor
               </v-btn>
             </div>
           </v-col>
@@ -44,35 +35,10 @@
         >
           <v-row align="center">
             <v-col
-              class="d-flex pb-0"
-              cols="12"
-              sm="12"
-            >
-              <div class="url-validation-text">
-                <br><br>
-                You can either drag and drop your IDS-AP self-description on the page in the box below, or
-                select the file with the “Select Document” button, or – if the self-description is
-                accessible online – paste the URL below. The self-description must be a valid
-                linked data file (application/ld+json, application/rdf+xml, application/n-triples,
-                application/trig, text/turtle, text/n3 or text/plain).
-              </div>
-            </v-col>
-            <v-col
               class="d-flex pt-0"
               cols="12"
               sm="12"
             >
-              <div @click="handleTextFieldClick" class="text-field-wrapper">
-                <v-text-field
-                  v-model="url"
-                  :rules="urlRules"
-                  :disabled="!!file"
-                  placeholder="Paste URL here..."
-                  :required="false"
-                  color="primary"
-                  @keydown.enter.prevent="preventFormSubmit"
-                />
-              </div>
             </v-col>
           </v-row>
           <v-row>
