@@ -16,21 +16,55 @@
             <div class="d-flex">
               <v-btn
                 primary
+                dark
                 class="mr-1"
                 color="#008469"
                 @click="loadExample"
               >
-                Load Example
+                Load Basic Example
               </v-btn>
               <v-btn
-                primary
-                :loading="$store.state['violations'].isLoading"
-                :disabled="$store.state['violations'].isLoading"
-                color="#008469"
-                @click="$emit('validate-schema', localModel.code, localModel.type);"
+                  primary
+                  dark
+                  class="mr-1"
+                  color="#008469"
+                  @click="loadExtendedExample"
               >
-                Validate
+                Load Extended Example
               </v-btn>
+              <v-menu offset-y>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn
+                      color="#008469"
+                      dark
+                      v-bind="attrs"
+                      v-on="on"
+                  >
+                    Validate
+                  </v-btn>
+                </template>
+                <v-list>
+                  <v-list-item
+                      v-for="(item, index) in menu"
+                      :key="index"
+                  >
+                    <v-list-item-title>
+                    <v-btn
+                        color="#008469"
+                        dark
+                        v-bind="attrs"
+                        v-on="on"
+                        @click="$emit(
+                            'validate-schema',
+                            localModel.code,
+                            localModel.type,
+                            item.schema);">
+                      {{ item.title }}
+                    </v-btn>
+                    </v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
             </div>
           </v-col>
         </v-row>
@@ -66,7 +100,8 @@
 <script>
 import { codemirror } from 'vue-codemirror';
 
-import EXAMPLE_CODE from '@/assets/SHACL_violations.json';
+import EXAMPLE_CODE from '@/assets/basic_example.ttl';
+import EXAMPLE_CODE_EXTENDED from '@/assets/extended_example.ttl';
 
 // import base style
 import 'codemirror/lib/codemirror.css';
@@ -102,7 +137,8 @@ export default {
   },
   data() {
     return {
-      exampleCode: JSON.stringify(EXAMPLE_CODE),
+      exampleCode: EXAMPLE_CODE,
+      extendedCode: EXAMPLE_CODE_EXTENDED,
       cmOptions: {
         tabSize: 4,
         mode: 'text/x-yaml',
@@ -118,6 +154,10 @@ export default {
           'CodeMirror-foldgutter',
         ],
       },
+      menu: [
+        { title: 'Basic Profile', schema: 'idsapbasic' },
+        { title: 'Extended Profile', schema: 'idsapext' },
+      ],
     };
   },
 
@@ -143,7 +183,11 @@ export default {
     },
     loadExample() {
       this.localModel.code = this.exampleCode;
-      this.localModel.type = 'application/ld+json';
+      this.localModel.type = 'text/turtle';
+    },
+    loadExtendedExample() {
+      this.localModel.code = this.extendedCode;
+      this.localModel.type = 'text/turtle';
     },
   },
 };

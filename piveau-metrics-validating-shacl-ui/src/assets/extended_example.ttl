@@ -1,0 +1,105 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ids: <https://w3id.org/idsa/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix data3: <https://aastat.gov.de/connector/conn3/data3/> .
+@prefix idsc: <https://w3id.org/idsa/code/> .
+@prefix part1: <https://im.internationaldataspaces.org/participant/part1> .
+@prefix freq: <http://purl.org/cld/freq/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+data3:
+    a <https://w3id.org/idsa/core/TextResource> ;
+    dct:language idsc:EN ;
+    dct:temporal [
+          a <https://w3id.org/idsa/core/Interval> ;
+          time:hasBeginning [
+                a time:Instant ;
+                ids:dateTime "2001-01-01T12:00:00-05:00"^^xsd:dateTime
+            ] ;
+          time:hasEnd [
+                a time:Instant ;
+                ids:dateTime "2017-12-31T12:00:00-05:00"^^xsd:dateTime
+            ]
+      ] ;
+    ids:contractOffer data3:offer;
+    dct:description "Detailed traffic analysis report based on European highway statistics data 2000 - 2017."@en ;
+    dct:keyword "report"^^xsd:string, "highway"^^xsd:string, "statistics"^^xsd:string, "Europe"^^xsd:string ;
+    dct:language idsc:EN ;
+    ids:representation [
+          a ids:TextRepresentation ;
+          dcat:mediaType <https://www.iana.org/assignments/media-types/application/pdf> ;
+          ids:instance data3:report_pdf ;
+          dct:accrualPeriodicity [ a ids:Frequency ;
+                                   rdf:value  freq:irregular ;
+                                   rdfs:label "irregular / dynamic" ; ]
+      ] ;
+    ids:representation [
+          a ids:TextRepresentation ;
+          dct:accrualPeriodicity [ a ids:Frequency ;
+                                   rdf:value  freq:regular ;
+                                   rdfs:label "regular / dynamic" ; ];
+          dcat:mediaType <https://www.iana.org/assignments/media-types/application/msword> ;
+          ids:instance data3:report_doc ;
+      ] ;
+    ids:resourceEndpoint [
+          a ids:ConnectorEndpoint ;
+          ids:accessURL <https://connector.aastat.gov.de/reports/Highway_traffic_statistics.pdf> ;
+          ids:endpointArtifact data3:report_pdf
+      ], [
+          a ids:ConnectorEndpoint ;
+          ids:accessURL <https://connector.aastat.gov.de/reports/Highway_traffic_statistics.doc> ;
+          ids:endpointArtifact data3:report_doc
+      ] ;
+    dct:title "European highway statistics - traffic report"@en .
+
+data3:offer
+    a ids:ContractOffer ;
+    ids:contractStart "2021-10-10T12:00:00-05:00"^^xsd:dateTime ;
+    ids:contractEnd      "2022-06-01T12:00:00-05:00"^^xsd:dateTime ;
+    ids:provider         <http://iml.fraunhofer.de> ;
+    ids:contractDocument data3:;
+    odrl:permission [
+          a odrl:Permission ;
+          odrl:action  data3:action;
+          ids:target data3: ;
+          odrl:assigner <https://im.internationaldataspaces.org/participant/part1> ;
+          odrl:assignee <https://im.internationaldataspaces.org/participant/part2> ;
+          odrl:constraint data3:constraint ].
+
+data3:report_pdf
+    a ids:Artifact ;
+    ids:byteSize "28923491"^^xsd:integer ;
+    ids:duration "13.456"^^xsd:decimal ;
+    ids:checkSum "11011010"^^xsd:string;
+    dct:created "2018-06-18T12:00:00.000+02:00"^^xsd:dateTimeStamp ;
+    ids:fileName "Highway_traffic_statistics.pdf"^^xsd:string .
+
+data3:report_doc
+    a ids:Artifact ;
+    ids:byteSize "28923491"^^xsd:integer ;
+    ids:duration "1.256"^^xsd:decimal ;
+    ids:checkSum "11111000"^^xsd:string;
+    ids:fileName "Highway_traffic_statistics.doc" ;
+    dct:created "2018-06-18T12:00:00.000+02:00"^^xsd:dateTimeStamp ;
+.
+
+idsc:READ a data3:action .
+data3:action a odrl:Action .
+
+<https://www.iana.org/assignments/media-types/application/pdf> a ids:IANAMediaType .
+<https://www.iana.org/assignments/media-types/application/msword> a ids:IANAMediaType .
+
+data3:constraint
+    a odrl:Constraint ;
+    ids:leftOperand idsc:DELAY ;
+    ids:operator idsc:LONGER ;
+    ids:rightOperand "PT20M"^^xsd:duration .
+
+idsc:EN a ids:Language .
+
+ids:IANAMediaType rdfs:subClassOf dct:MediaType .

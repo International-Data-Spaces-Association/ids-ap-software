@@ -149,7 +149,7 @@ object IDSBASE {
         val model = ModelFactory.createDefaultModel()
         //log.info("Loading IDS Base")
         File("src/main/resources/rdf/shapes/ids-base/4.1.0/testing").walkTopDown().forEach {
-            
+
             if (it.extension == "ttl") {
                 log.info(it.absolutePath)
                 model.read(it.absolutePath)
@@ -159,6 +159,24 @@ object IDSBASE {
         model
     }
 
+    val shapes: Shapes = Shapes.parse(model)
+}
+
+object IDSAPBASIC {
+    val model: Model by lazy {
+        ModelFactory.createDefaultModel().apply {
+            readTurtleResource("rdf/shapes/ids-ap/basicIDSValidation-ExternalReferences.ttl")
+        }
+    }
+    val shapes: Shapes = Shapes.parse(model)
+}
+
+object IDSAPEXT {
+    val model: Model by lazy {
+        ModelFactory.createDefaultModel().apply {
+            readTurtleResource("rdf/shapes/ids-ap/extendedValidation-ExternalReferences.ttl")
+        }
+    }
     val shapes: Shapes = Shapes.parse(model)
 }
 
@@ -174,6 +192,8 @@ fun String.findShapesModel(): Model = when (this) {
     "dcatap11" -> DCATAP11.model
     "dcatap11orig" -> DCATAP11orig.model
     "dcatapde102" -> DCATAPDE102.model
+    "idsapbasic" -> IDSAPBASIC.model
+    "idsapext" -> IDSAPEXT.model
     "idsbase" -> IDSBASE.model
     else -> IDSBASE.model
 }
@@ -189,6 +209,8 @@ fun String.findShapes(): Shapes = when (this) {
     "dcatap11" -> DCATAP11.shapes
     "dcatap11orig" -> DCATAP11orig.shapes
     "dcatapde102" -> DCATAPDE102.shapes
+    "idsapbasic" -> IDSAPBASIC.shapes
+    "idsapext" -> IDSAPEXT.shapes
     "idsbase" -> IDSBASE.shapes
     else -> IDSBASE.shapes
 }

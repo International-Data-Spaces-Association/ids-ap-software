@@ -1,6 +1,7 @@
 // const CompressionPlugin = require('compression-webpack-plugin');
 // const zlib = require('zlib');
 
+
 module.exports = {
   publicPath: '/',
   devServer: {
@@ -8,6 +9,19 @@ module.exports = {
   },
   runtimeCompiler: true,
   transpileDependencies: ['vuetify'],
+  configureWebpack:  {
+    module: {
+      rules: [
+        {
+          test: /\.ttl/,
+          use: 'raw-loader'
+        },
+      ]
+    }
+  }
+
+
+
   /* configureWebpack: {
     plugins: [
       new CompressionPlugin({

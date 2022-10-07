@@ -39,6 +39,8 @@ paths:
               - "dcatap11"
               - "dcatap11orig"
               - "dcatapde102"
+              - "idsapbasic"
+              - "idsapext"
             default: "dcatap201"
       requestBody:
         description: The content to validate

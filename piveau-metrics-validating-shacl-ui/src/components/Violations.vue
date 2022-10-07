@@ -13,7 +13,6 @@
         </v-col>
       </v-row>
     </v-card-title>
-
     <v-card-text class="violations__body-container">
       <v-container
         fluid

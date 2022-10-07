@@ -5,10 +5,9 @@ import org.apache.jena.shacl.ShaclValidator
 
 import org.slf4j.LoggerFactory
 
-
 var useJena: Boolean = true
 
-const val DEFAULT_SHAPES_VERSION: String = "idsbase"
+const val DEFAULT_SHAPES_VERSION: String = "dcatap201"
 
 private val validator = ShaclValidator.get()
 

@@ -104,11 +104,11 @@ export default {
     return {
       type: 'application/rdf+xml',
       items: [
+        'text/turtle',
         'application/ld+json',
         'application/rdf+xml',
         'application/n-triples',
         'application/trig',
-        'text/turtle',
         'text/n3',
       ],
       valid: false,

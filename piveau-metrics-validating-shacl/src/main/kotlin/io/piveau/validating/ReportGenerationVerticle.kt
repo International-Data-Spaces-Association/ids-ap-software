@@ -37,20 +37,17 @@ class ReportGenerationVerticle : AbstractVerticle() {
         val acceptableContentType = getString("acceptableContentType")
         val shapeModel = getString("shapeModel")
         try {
-            val model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM)
-            model.add(content.toByteArray(StandardCharsets.UTF_8).toModel(contentType))
-            model.add(Vocabularies.model)
-            println(model.graph.size())
+            val model = content.toByteArray(StandardCharsets.UTF_8).toModel(contentType)
             val measured = measureTimedValue {
                 validateModel(model, shapeModel)
             }
             log.debug("RDF validated against {} in {} milliseconds", shapeModel, measured.duration.inWholeMilliseconds)
-            println("finished")
             val report = measured.value
             message.reply(report.asString(acceptableContentType.asRdfLang()))
         } catch (e: Exception) {
             message.fail(400, e.message)
         }
     }
+
 
 }

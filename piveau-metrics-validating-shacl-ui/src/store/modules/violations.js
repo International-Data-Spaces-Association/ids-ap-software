@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 
-function getShaclViolations(body, type) {
+function getShaclViolations(body, type, param = 'idsapbasic') {
   const shaclApi = axios.create({
     baseURL: Vue.prototype.$env.VUE_APP_SHACL_API_URL || process.env.VUE_APP_SHACL_API_URL || 'http://localhost:8000',
     headers: {
@@ -9,15 +9,15 @@ function getShaclViolations(body, type) {
       'Content-Type': `${type}`,
     },
   });
-  return shaclApi.post('validation/report', body, { params: { shapeModel: 'dcatap201' } });
+  return shaclApi.post('validation/report', body, { params: { shapeModel: param } });
 }
 
 function getShaclViolationsByURL(shaclUrl, type) {
   return getShaclViolations(shaclUrl, type);
 }
 
-function getShaclViolationsBySchema(schema, type) {
-  return getShaclViolations(schema, type);
+function getShaclViolationsBySchema(schema, type, param) {
+  return getShaclViolations(schema, type, param);
 }
 
 export default {
@@ -37,7 +37,9 @@ export default {
   },
 
   actions: {
-    async getViolations({ commit }, { body, bySchema = true, type }) {
+    async getViolations({ commit }, {
+      body, bySchema = true, type, param,
+    }) {
       // Reset violations
       commit('SET_VIOLATIONS', []);
       commit('SET_VIOLATIONS_SUCCESS', true);
@@ -46,7 +48,7 @@ export default {
       try {
         // Get violations
         const response = bySchema
-          ? await getShaclViolationsBySchema(body, type)
+          ? await getShaclViolationsBySchema(body, type, param)
           : await getShaclViolationsByURL(body, type);
 
         // Artifically delay response to test loading behavior
@@ -66,8 +68,10 @@ export default {
       commit('SET_LOADING', false);
     },
 
-    async getViolationsBySchema({ dispatch }, { schema, type }) {
-      dispatch('getViolations', { body: schema, bySchema: true, type });
+    async getViolationsBySchema({ dispatch }, { schema, type, param }) {
+      dispatch('getViolations', {
+        body: schema, bySchema: true, type, param,
+      });
     },
   },
 

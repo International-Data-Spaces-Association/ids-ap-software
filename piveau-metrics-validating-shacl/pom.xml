@@ -87,7 +87,7 @@
         <dependency>
             <groupId>io.piveau.utils</groupId>
             <artifactId>piveau-utils</artifactId>
-            <version>9.2.0</version>
+            <version>8.2.0</version>
         </dependency>
         <dependency>
             <groupId>io.piveau.pipe</groupId>

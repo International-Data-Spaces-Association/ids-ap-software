@@ -124,27 +124,20 @@ class MainVerticle : CoroutineVerticle() {
 
     private fun handleValidation(context: RoutingContext) {
         val shapeModel = context.queryParam("shapeModel").firstOrNull() ?: DEFAULT_SHAPES_VERSION
-        println("Shape model: " + shapeModel)
-        println("Headers: " + context.request().headers())
-        val message =
-                JsonObject()
-                        .put("contentType", context.request().getHeader("Content-Type"))
-                        .put("content", context.bodyAsString)
-                        .put(
-                                "acceptableContentType",
-                                context.acceptableContentType ?: "text/ld+json"
-                        )
-                        .put("shapeModel", shapeModel)
+        val message = JsonObject()
+            .put("contentType", context.request().getHeader("Content-Type"))
+            .put("content", context.bodyAsString)
+            .put("acceptableContentType", context.acceptableContentType ?: "text/turtle")
+            .put("shapeModel", shapeModel)
 
         vertx.eventBus().request<String>(
-                        ReportGenerationVerticle.ADDRESS_REPORT,
-                        message,
-                        DeliveryOptions().setSendTimeout(300000)
-                ) {
+            ReportGenerationVerticle.ADDRESS_REPORT,
+            message,
+            DeliveryOptions().setSendTimeout(300000)
+        ) {
             if (it.succeeded()) {
-                context.response()
-                        .putHeader("Content-Type", message.getString("acceptableContentType"))
-                        .end(it.result().body())
+                context.response().putHeader("Content-Type", message.getString("acceptableContentType"))
+                    .end(it.result().body())
             } else {
                 it.cause().let { cause ->
                     if (cause is ReplyException) {
@@ -156,6 +149,7 @@ class MainVerticle : CoroutineVerticle() {
             }
         }
     }
+
 }
 
 fun main(args: Array<String>) {

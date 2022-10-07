@@ -38,6 +38,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "google-fonts-plugin": "^5.0.2",
     "postcss-loader": "^3.0.0",
+    "raw-loader": "^4.0.2",
     "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vuetify": "^2.0.6",
