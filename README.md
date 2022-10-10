@@ -1,9 +1,13 @@
-# ids-ap-software
-Software components to interchange and validate Application Profiles. Contains forks of DSC and SHACL Validator.
+# IDS-AP Software
+Software components and tools to interchange and validate Application Profiles.   
+An instance is deployed here: https://ids-ap.fokus.fraunhofer.de/
 
 # Usage
 
-First, the two services DataspaceConnector (DSC) and SHACL Validator need to be built and started. Whenever the DSC wants to respond some JSONLD, it first sends it to the SHACL Validator to confirm it conforms to a selected application profile.
+The DataspaceConnector (DSC) can be used to create example connector self-descriptions. 
+piveau-metrics-validating-shacl is a simple service that allows to validate RDF payloads 
+against predefined SHACL shapes. piveau-metrics-validating-shacl-ui is a corresponding 
+web frontend.
 
 ## Build and start the DSC
 
@@ -27,6 +31,17 @@ java -jar target/validating-shacl.jar
 
 Note: The DSC runs on port 8888, the SHACL Validator runs on port 8080
 
+## Build and start the SHACL Validator UI
+
+In root of repository, enter the following in a *separate* command line window:
+
+```
+cd piveau-metrics-validating-shacl-ui
+npm install
+npm run dev
+```
+
+
 ## Query endpoints
 
 The only endpoint of the DSC that currently implements the automatic JSONLD-testing is the self description endpoint `https://localhost:8888/api/connector`. It has been duplicated under `https://localhost:8888/api/connectorbad` that generates a corrupted self description that does not conform to the IDS Base Application Profile specified in the SHACL Shapes.
@@ -39,8 +54,8 @@ New APs can be placed in a separate folder under `ids-ap-software/piveau-metrics
 In code, a mapping must be extended that maps an AP's identifier to the folder location:
 
 * Open `ids-ap-software/piveau-metrics-validating-shacl/src/main/kotlin/io/piveau/validating/DCATAPShapes.kt`
-* Create a new object that contains the loaded SHACL shapes. Use `IDSBASE` in line 146 as a reference.
-* Add the new AP to the mapping functions `String.findShapesModel()` and `String.findShapes()` in line 166 and 181
+* Create a new object that contains the loaded SHACL shapes. Use `IDSAPBASIC` as a reference.
+* Add the new AP to the mapping functions `String.findShapesModel()` and `String.findShapes()`.
 * The string that is used for the lookup in the mapping functions will be the string that is supplied in the query parameter `shapesModel` to select the AP.
 
 Example: `POST http://localhost:8080/shacl/validation/report?shapesModel=idsbase`

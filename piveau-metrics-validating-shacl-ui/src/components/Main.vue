@@ -75,6 +75,23 @@
         />
       </v-col>
     </v-row>
+    <v-row class="content-boxes mobile-row">
+      <v-col
+          class="mobile-col"
+          cols="12"
+          lg="8"
+      >
+        <Info />
+      </v-col>
+    </v-row>
+    <v-footer padless bottom fixed>
+      <v-col
+          class="text-center"
+          cols="12"
+      >
+        <a href="https://ids.fokus.fraunhofer.de/imprint">Imprint</a>  | <a href="https://ids.fokus.fraunhofer.de/privacy">Data Protection</a>
+      </v-col>
+    </v-footer>
   </v-container>
 </template>
 
@@ -83,6 +100,7 @@
 import UrlTab from '@/components/UrlTab.vue';
 import EditorTab from '@/components/EditorTab.vue';
 import Violations from '@/components/Violations.vue';
+import Info from '@/components/Info.vue';
 
 import { mapGetters } from 'vuex';
 import { readFileAsync } from '@/utils/helpers';
@@ -95,6 +113,7 @@ export default {
     UrlTab,
     EditorTab,
     Violations,
+    Info,
   },
 
   metaInfo() {
